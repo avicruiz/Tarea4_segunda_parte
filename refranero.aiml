@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+    
+    <!-- Adaptación del código de jokes.aiml para desarrollar la práctica -->
+    
+    <category>
+        <pattern>Hola</pattern>
+        <template>Hola, me llamo Frida y conozco muchos refranes o dichos populares</template>
+    </category>
+    
+    <category>
+        <pattern>Dime una frase hecha en castellano</pattern>
+    
+        <template>
+            <random>
+                <li>Tener algo en la punta de la lengua.  </li>
+                <li>Tomar el pelo  </li>
+                <li>Quedarse con la boca abierta  </li>
+                <li>Pasar la noche en blanco  </li>
+                <li>Perder la cabeza  </li>
+                <li>Costar un ojo de la cara  </li>
+                <li>Echar una mano  </li>
+                <li>Matar el gusanillo  </li>
+                <li>Meter la pata  </li>
+                <li>Estar en Babia  </li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Dime una frase hecha en lengua catalana</pattern>
+    
+        <template>
+            <random>
+                <li>A la quinta forca (La traducción de esta frase sería al quinto pino. Muy lejano) </li>
+                <li>Bufar i fer ampolles (Se usa al referirse a algo que se hace con mucha facilidad) </li>
+                <li>Cap geperut no es veu el gep (Ningún jorobado se ve la joroba, es una frase que se le dice a alguien que no ve sus propios defectos.) </li>
+                <li>Fer cara de pomes agres (Es una frase que describe una expresión facial que denota que alguien está enfadado.) </li>
+                <li>Treure el fetge per la boca (Sacar el hígado por la boca, esta frase es muy usada cuando uno ha hecho un gran esfuerzo físico y siente que todo que lleva dentro se remueve.) </li>
+                <li>Ser un sac de gemecs (Su significado es ser alguien que se pasa el dia quejándose por todo.) </li>
+                <li>Explicar un sopar de duro (Su frase hecha equivalente en español sería contar un cuento chino.) </li>
+                <li>Veure’s el llautó (Su traducció sería la expresión se te ve el plumero, pero no sé su origen, solamente puedo decir que significa que a alguien se le nota a la legua que está mintiendo.) </li>
+            </random>
+        </template>
+    </category>
+
+    <!-- Categoría con uso de fichero maps donde defino las palabras clave con el refrán relacionado -->
+    
+    <category>
+        <pattern>Dime un dicho con la palabra <set>palabraclave</set> </pattern>
+        <template>
+            <b><map name="palabraclaverefran"><star/></map></b>. Esta es la frase hecha que se me ocurre con la palabra  '<star/>' que me has sugerido.
+        </template>
+    </category>
+
+
+</aiml>
