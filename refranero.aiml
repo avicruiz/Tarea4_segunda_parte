@@ -4,8 +4,8 @@
     <!-- Adaptación del código de jokes.aiml para desarrollar la práctica -->
     
     <category>
-        <pattern>Hola</pattern>
-        <template>Hola, me llamo Frida y conozco muchos refranes o dichos populares</template>
+        <pattern><set>saludo</set></pattern>
+        <template>Hola, me llamo Emma y conozco muchos refranes y dichos populares. Me puedes preguntar por dichos en castellano o lengua catalana. O por ejemplo, si me dices una palabra te respondo un dicho. Cuando quieras!</template>
     </category>
     
     <category>
@@ -53,5 +53,21 @@
         </template>
     </category>
 
+	<category>
+        <pattern>Háblame sobre *</pattern>
+        <template>
+            <think><set name="it"><star/></set></think>
+            Aquí hay información sobre <formal><star/></formal>.
+            <button>
+                <text>Pulsa aquí</text>
+                <url>https://en.wikipedia.org/wiki/<star/></url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern><set>despedida</set></pattern>
+        <template><map name="despedidarespuesta"><star/></map></template>
+    </category>
 
 </aiml>
